@@ -45,7 +45,7 @@ myReverse :: [a] -> [a]
 myReverse = undefined
 
 -- `elem`:
-myElem :: Int -> [Int] -> Bool
+myElem :: Eq a => a -> [a] -> Bool
 myElem = undefined
 
 -- `(!!)`:
