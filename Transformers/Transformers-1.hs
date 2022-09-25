@@ -117,7 +117,7 @@ instance (Monad g, Monad f) => Monad (Compose g f) where
 --   * returns a new Monad as a result (i.e. `MaybeT m`)
 
 -- Note: the name of the transformer (`MaybeT`) comes from the *inner* monad, whose type is known
-newtype MaybeT m a = MaybeT { runMaybeT :: m (Maybe a) }
+newtype MaybeT n a = MaybeT { runMaybeT :: n (Maybe a) }
 -- `MaybeT` is a Maybe value, in some other (unknown) context that has a Monad instance
 -- The other Monad, called the "base monad", remains polymorphic as an argument to the constructor.
 -- Note that, somewhat counterintuitively, the base monad is structurally the outermost context.
